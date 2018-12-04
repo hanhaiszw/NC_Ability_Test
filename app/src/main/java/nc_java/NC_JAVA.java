@@ -30,11 +30,11 @@ public class NC_JAVA {
 				for (int n = 0; n < k; ++n) {
 					int a = mat1[i][n];
 					if (a < 0) {
-						a = 256 - Math.abs(a);
+						a = 256 + a;
 					}
 					int b = mat2[n][j];
 					if (b < 0) {
-						b = 256 - Math.abs(b);
+						b = 256 + b;
 					}
 					temp = gf.add(temp, gf.mul(a, b));
 				}
@@ -44,38 +44,6 @@ public class NC_JAVA {
 		return result;
 	}
 
-	// 输入操作范围
-	public static byte[][] Multiply(byte[][] mat1,int row1,int col1, byte[][] mat2,int row2,int col2) {
-		int row = row1;
-		int k = col1;
-		int k1 = row2;
-		// 第一个矩阵列不等于第二个矩阵的行，不能相乘
-		if (k != k1) {
-			return null;
-		}
-
-		int col = col2;
-		byte[][] result = new byte[row][col];
-		int temp;
-		for (int i = 0; i < row; ++i) {
-			for (int j = 0; j < col; ++j) {
-				temp = 0;
-				for (int n = 0; n < k; ++n) {
-					int a = mat1[i][n];
-					if (a < 0) {
-						a = 256 - Math.abs(a);
-					}
-					int b = mat2[n][j];
-					if (b < 0) {
-						b = 256 - Math.abs(b);
-					}
-					temp = gf.add(temp, gf.mul(a, b));
-				}
-				result[i][j] = (byte) temp;
-			}
-		}
-		return result;
-	}
 	// 矩阵求逆
 	public static byte[][] Inverse(byte[][] M) {
 		int nRow = M.length;

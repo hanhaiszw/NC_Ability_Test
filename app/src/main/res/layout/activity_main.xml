@@ -17,25 +17,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
-            android:layout_weight="3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="3"
 
-            android:text="Input the size of data (MB):            "
+            android:text="Input the size of data (MB):"
             android:textColor="#242424"
             android:textSize="15dp" />
 
         <EditText
-            android:layout_weight="1"
             android:id="@+id/et_data_size"
             style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:ems="10"
             android:gravity="center"
             android:hint="dataSize"
             android:inputType="number"
+            android:text="1"
             android:textColor="#242424"
             android:textSize="15dp" />
     </LinearLayout>
@@ -44,25 +46,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
-            android:layout_weight="3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="3"
 
             android:text="Input the size of generations (K):"
             android:textColor="#242424"
             android:textSize="15dp" />
 
         <EditText
-            android:layout_weight="1"
             android:id="@+id/et_K"
             style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:ems="10"
             android:gravity="center"
             android:hint="K"
             android:inputType="number"
+            android:text="2"
             android:textColor="#242424"
             android:textSize="15dp" />
     </LinearLayout>
@@ -72,23 +76,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
-            android:layout_weight="3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="3"
             android:gravity="center"
             android:text="JNI Time(s):"
             android:textColor="#242424"
             android:textSize="15dp" />
 
         <EditText
-            android:enabled="false"
-            android:layout_weight="1"
             android:id="@+id/et_JNI_time"
             style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:ems="10"
+            android:enabled="false"
             android:gravity="center"
             android:textColor="#242424"
             android:textSize="15dp" />
@@ -98,23 +103,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
-            android:layout_weight="3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="3"
             android:gravity="center"
             android:text="JAVA Time(s):"
             android:textColor="#242424"
             android:textSize="15dp" />
 
         <EditText
-            android:enabled="false"
-            android:layout_weight="1"
             android:id="@+id/et_JAVA_time"
             style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:ems="10"
+            android:enabled="false"
             android:gravity="center"
             android:textColor="#242424"
             android:textSize="15dp" />

@@ -15,7 +15,6 @@ import nc_java.NC_JAVA;
 import utils.MyThreadPool;
 
 public class MainActivity extends AppCompatActivity {
-
     @BindView(R.id.et_data_size)
     EditText et_data_size;
     @BindView(R.id.et_K)
