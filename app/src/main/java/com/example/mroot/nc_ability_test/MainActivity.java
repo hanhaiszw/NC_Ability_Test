@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
             return;
         }
-        if (K < 2 || K > 10 || dataSize < 1 || dataSize > 10) {
+        if (K < 2 || K > 20 || dataSize < 1 || dataSize > 10) {
             Toast.makeText(this, "合法数据范围：dataSize[1,10], K[2,10]", Toast.LENGTH_LONG).show();
             return;
         }
@@ -70,8 +70,19 @@ public class MainActivity extends AppCompatActivity {
         dataSize *= 1024 * 1024;
         int nSubDataSize = (int) Math.ceil(dataSize / K);
         runNC_JNI(K, nSubDataSize);
-        runNC_JAVA(K,nSubDataSize);
+        runNC_JAVA(K, nSubDataSize);
         Toast.makeText(this, "编解码结束", Toast.LENGTH_SHORT).show();
+    }
+
+    @OnClick(R.id.btn_test1)
+    public void test01() {
+        byte[] b1 = {12, 34, 45, 113};
+        byte[] b2 = {112, 78, 42, (byte) 213};
+
+        byte[] ret = NCUtils.mul(b1,b2);
+        for (int i = 0; i < ret.length; i++) {
+            System.out.println((int) ret[i]);
+        }
     }
 
     public void runNC_JNI(int K, int nSubDataSize) {
@@ -101,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
         // Starting time.
         long startMili = System.currentTimeMillis();
 
-        byte[][] encodeData = NC_JAVA.Multiply(random_matrix,data);
+        byte[][] encodeData = NC_JAVA.Multiply(random_matrix, data);
 
         // Ending time.
         long endMili = System.currentTimeMillis();
@@ -109,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
         float valueC = ((float) (endMili - startMili)) / 1000;
         et_JAVA_time.setText(valueC + "");
     }
+
 
     public int getEtNum(EditText editText) throws Exception {
         String str = editText.getText().toString();

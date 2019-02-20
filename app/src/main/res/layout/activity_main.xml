@@ -133,4 +133,11 @@
         android:layout_height="wrap_content"
         android:text="Test" />
 
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btn_test1"
+        style="@android:style/Widget.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="android8测试" />
 </LinearLayout>
