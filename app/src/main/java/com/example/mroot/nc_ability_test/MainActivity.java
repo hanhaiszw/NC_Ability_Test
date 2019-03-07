@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         if (K < 2 || K > 20 || dataSize < 1 || dataSize > 10) {
-            Toast.makeText(this, "合法数据范围：dataSize[1,10], K[2,10]", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "合法数据范围：dataSize[1,10], K[2,20]", Toast.LENGTH_LONG).show();
             return;
         }
 
